@@ -31,8 +31,9 @@ var player = {
 	checkBust: function(){
 		if (this.currentSum > 21){
 			alert(this.currentSum + " - BUST! YOU LOSE");
+			return true;
 		};
-		return;
+		return false;
 	}
 };
 
@@ -68,20 +69,24 @@ var dealer = {
 	checkBust: function(){
 		if (this.currentSum > 21){
 			alert(this.currentSum + " - BUST! DEALER LOSES!");
+			return true;
 		};
-		return;
+		return false;
 	}
 };
 
 var compareHands = function(){
 	if(player.currentSum > dealer.currentSum){
 		alert("Player wins!\n" + player.currentSum + " to " + dealer.currentSum);
+		return "player";
 	}
 	else if (player.currentSum < dealer.currentSum){
 		alert("Dealer wins!\n" + dealer.currentSum + " to " + player.currentSum);
+		return "dealer";
 	}
 	else{
 		alert("Draw!\n" + dealer.currentSum + " to " + player.currentSum);
+		return "draw";
 	}
 	//resetDeck();
 }
