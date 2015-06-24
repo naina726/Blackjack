@@ -1,11 +1,13 @@
-var deck = [];
+console.log("theDeck.js loaded");
+
+deck = [];
 var card;
 
 var Card = function(value, suit, idCode){
   this.value = value;
   this.suit = suit;
   this.idCode = idCode;
-}
+};
 
 var initDeck = function(){
   var allSuits = ["heart", "diamond", "club", "spade"];
@@ -35,12 +37,11 @@ var initDeck = function(){
     }
   }
   shuffle();
-  console.log(deck);
-}
+};
 
 //Shuffle function is JS implementation of Fisher-Yates shuffle:
 //from http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-var shuffle = function(){
+shuffle = function(){
   console.log("Shuffled");
   for (var i = deck.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
@@ -49,7 +50,7 @@ var shuffle = function(){
     deck[j] = temp;
   }
   return;
-}
+};
 
 
 
