@@ -1,0 +1,23 @@
+html{
+	background-image: url(../img/bg.jpg);
+}
+
+button{
+  border-radius: 59px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 80px;
+  padding: 40px;
+  padding-bottom: 52px;
+  background: rgba(0,0,0,0.5);
+  text-decoration: none;
+  border: solid white 2px;
+  margin-left: 320px;
+  margin-top: 220px;
+
+}
+button a{
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+}
