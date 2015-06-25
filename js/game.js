@@ -42,50 +42,56 @@ playerBank = {
 
 var playerTurn = function(){
 	playerBank.makeBet();
-	var playerHit = confirm("Hit?");
-	player.hit();
-
+	var playerHit = true;
 	while(!player.checkBust() && playerHit){
 		playerHit = confirm("Hit?");
 		if (playerHit){
 			player.hit();
 		};
 	};
-}
+	return;
+};
 
 var dealerTurn = function(){
 	dealer.initialDeal();
 	dealer.hit();
-}
+	return;
+};
 
 var playGame = function(){
 	initGame();
 	playerTurn();
 
 	if(player.checkBust()){
+		alert("Dealer wins!\n" + dealer.currentSum + " to " + player.currentSum);
 		playerBank.lostBet();
 	}
 
 	else{
 		dealerTurn();
 		if(dealer.checkBust()){
+			alert("Player wins!\n" + player.currentSum + " to " + dealer.currentSum);
 			playerBank.wonBet();
 		}
 		else{
 			var finalResult = compareHands();
-			case(finalResult){
-				case "player":
-					playerBank.wonBet();
-					break;
-				case "dealer":
-					playerBank.lostBet();
-					break;
-				case "draw":
-					playerBank.drawBet();
+			if (finalResult == "player"){
+				alert("Player wins!\n" + player.currentSum + " to " + dealer.currentSum);
+				playerBank.wonBet();
 			}
+			else if (finalResult == "dealer"){
+				alert("Dealer wins!\n" + dealer.currentSum + " to " + player.currentSum);
+				playerBank.lostBet();
+			}
+			else if (finalResult == "draw"){
+				alert("Draw!\n" + dealer.currentSum + " to " + player.currentSum);
+				playerBank.drawBet();
+			}
+			else{ console.log("Error with bets")}
 		}
 	}
-}
+	return;
+};
 
 
 

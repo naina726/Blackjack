@@ -77,19 +77,16 @@ var dealer = {
 
 var compareHands = function(){
 	if(player.currentSum > dealer.currentSum){
-		alert("Player wins!\n" + player.currentSum + " to " + dealer.currentSum);
 		return "player";
 	}
 	else if (player.currentSum < dealer.currentSum){
-		alert("Dealer wins!\n" + dealer.currentSum + " to " + player.currentSum);
 		return "dealer";
 	}
 	else{
-		alert("Draw!\n" + dealer.currentSum + " to " + player.currentSum);
 		return "draw";
 	}
 	//resetDeck();
-}
+};
 
 //////////////////////////////////////
 var resetDeck = function(){
@@ -102,4 +99,4 @@ var resetDeck = function(){
 		deck.push(player.hand.unshift());
 	}
 	shuffle();
-}
+};
