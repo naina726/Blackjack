@@ -6,9 +6,23 @@ var player = {
 
 	computeValue: function(){
 		this.currentSum = 0;
+		var ace = false;
 		for(var i = 0; i < (this.hand).length; i++){
-			this.currentSum += (this.hand[i].value)
+			if(this.hand[i].suit == "ace"){
+				ace = true;
+			}
+			this.currentSum += (this.hand[i].value);
 		};
+		if (ace && (this.currentSum > 21)){
+			for(var i = 0; i < (this.hand).length; i++){
+				if(this.hand[i].suit == "ace"){
+					this.currentSum += 1;
+				}
+				else{
+					this.currentSum += (this.hand[i].value);
+				}
+			};
+		}
 		return;
 	},
 
@@ -76,7 +90,15 @@ var dealer = {
 };
 
 var compareHands = function(){
-	if(player.currentSum > dealer.currentSum){
+	if (player.currentSum == 21){
+		if(dealer.currentSum == 21){
+			return "draw";
+		}
+		else{
+			return "playerBlackjack";
+		}
+	}
+	else if(player.currentSum > dealer.currentSum){
 		return "player";
 	}
 	else if (player.currentSum < dealer.currentSum){
@@ -85,18 +107,20 @@ var compareHands = function(){
 	else{
 		return "draw";
 	}
-	//resetDeck();
 };
 
 //////////////////////////////////////
 var resetDeck = function(){
-	while(player.hand != [])
+	while(player.hand.length != 0)
 	{
-		deck.push(player.hand.unshift());
+		deck.push(player.hand.pop());
 	}
-	while(dealer.hand != [])
+	while(dealer.hand.length != 0)
 	{
-		deck.push(player.hand.unshift());
+		deck.push(dealer.hand.pop());
 	}
+	player.currentSum = 0;
+	dealer.currentSum = 0;
 	shuffle();
+	return;
 };
