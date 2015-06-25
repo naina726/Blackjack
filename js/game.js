@@ -1,67 +1,12 @@
 console.log("game.js loaded");
 
-var initGame = function(){
-	initDeck();
-	player.initialDeal();
-	dealer.initialDeal();
-	console.log(player.hand);
-	console.log(dealer.hand);
-	console.log("Bank balance: $" + playerBank.returnBalance())
-};
-
-playerBank = {
-	balance: 500,
-	currentBet: 0,
-
-	returnBalance: function(){
-		return this.balance;
-	},
-
-	makeBet: function(){
-		this.currentBet = parseInt(prompt("Enter bet!"));
-		while (this.currentBet > this.balance){
-			alert("Insufficient funds");
-			this.currentBet = prompt("Enter bet!");
-		}
-		this.balance -= this.currentBet;
-		console.log("Bank balance: $" + this.balance);
-		console.log("Current bet: $" + this.currentBet);
-		return;
-	},
-
-	wonBet: function(){
-		this.balance+=(this.currentBet * 2);
-		this.currentBet = 0;
-		console.log("Bank balance: $" + this.balance);
-	},
-
-	lostBet: function(){
-		this.currentBet = 0;
-		console.log("Bank balance: $" + this.balance);
-	},
-	
-	drawBet: function(){
-		this.balance += this.currentBet;
-		this.currentBet = 0;
-		console.log("Bank balance: $" + this.balance);
-	},
-
-	blackjackBet: function(){
-		this.balance += (this.currentBet + (this.currentBet*1.5));
-		this.currentBet = 0;
-		console.log("Bank balance: $" + this.balance);
-	}
-
-};
-
 var playerTurn = function(){
-	playerBank.makeBet();
 	var playerHit = true;
 	while(!player.checkBust() && playerHit){
 		playerHit = confirm("Hit?");
 		if (playerHit){
 			player.hit();
-		};
+		}
 	};
 	return;
 };
@@ -74,7 +19,7 @@ var dealerTurn = function(){
 var computeRoundWinner = function(){
 	var finalResult = compareHands();
 
-	if(finalResult == playerBlackjack){
+	if(finalResult == "playerBlackjack"){
 		alert("BLACKJACK!\nPlayer wins!\n" + player.currentSum + " to " + dealer.currentSum);
 		playerBank.blackjackBet();
 	}
@@ -95,7 +40,11 @@ var computeRoundWinner = function(){
 }
 
 var playGame = function(){
-	initGame();
+	console.log("Bank balance: $" + playerBank.returnBalance());
+	playerBank.makeBet();
+	player.initialDeal();
+	dealer.initialDeal();
+
 	playerTurn();
 
 	if(player.checkBust()){

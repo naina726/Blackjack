@@ -14,7 +14,7 @@ var initDeck = function(){
   for (var i = 0; i < allSuits.length; i++){
     for (var k = 1; k < 14; k++){
       if(k == 1){
-        card = new Card(11, allSuits[i], "ace");
+        card = new Card(1, allSuits[i], "ace");
         deck.push(card);
       }
       else if(k < 11){
