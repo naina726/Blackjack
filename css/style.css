@@ -1,5 +1,6 @@
 html{
 	background-image: url(../img/bg.jpg);
+	overflow: hidden;
 }
 /* DEALER SIDE STUFF */
 #cashout{
@@ -13,6 +14,9 @@ html{
   	margin-top: 20px;
   	margin-left: 20px;
 }
+#cashout:hover{
+  background: rgba(0,0,0,0.7);
+}
 .back{
 	width: 100px;
 	height: 150px;
@@ -24,26 +28,49 @@ html{
 	margin-top: 20px;
 }
 #deckPos{
-	margin-left: 1000px;
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	/*margin-left: 1000px;*/
 }
 #dealerFlip{
-	margin-left: 700px;
+	position: absolute;
+	left: 730px;
 }
 /* END DEALER SIDE STUFF*/
 
 /* PLAYER SIDE STUFF */
+.bank {
+	position: absolute;
+	display: inline-block;
+	float: left;
+	bottom:25px;
+	left: 25px;
+	background: rgba(0,0,0,0.5);
+	border: 2px solid white;
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+	text-align: center;
+}
 p {
 	font-family: Georgia;
 	font-size: 22px; 
 	/* HOW THE FUCK DO U MAKE THIS WHITE */
-  	font-color: white;
+  	color: white;
   	text-decoration: none;
+  	left: 10px;
+  	margin: 0;
 }
 .bankBox{
-	width: 100;
-	height: 40;
-	background-color: #FFEBD6;
+	width: 130px;
+	height: 50px;
 	border-radius: 10px;
+	border: 1px solid white;
+	background: rgba(0,0,0,0.5);
+	margin-top: 10px;
+	margin-bottom:10px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .tokens button{
 	font-size: 18px;
@@ -53,29 +80,43 @@ p {
 	border: .25em dashed white;
   	font-family: Georgia;
   	color: #ffffff;
-  	
+  	margin: 5px;
+  	top: 20px;
 }
 #ten{
-	background-color: red;
+	background-color: indianred;
 }
 #twenty{
-	background-color: green;
+	background-color: MediumSeaGreen;
 }
 #fifty{
-	background-color: blue;
+	background-color: cornflowerblue;
 }
 
 
 .moveButtons button{
-	font-size: 20px;
-	padding: 15px;
-	border-radius: 28px;
+	font-size: 30px;
+	padding: 20px;
+	border-radius: 40px;
 	border: solid white 2px;
 	background: rgba(0,0,0,0.5);
   	font-family: Georgia;
   	color: #ffffff;
+  	position: absolute;
+	display: inline-block;
+	float: right;
 }
-
+.moveButtons button:hover{
+  background: rgba(0,0,0,0.7);
+}
+#hit{
+  	bottom: 180px;
+	right: 96px;
+}
+#stay{
+	bottom: 90px;
+	right: 90px;
+}
 
 
 
