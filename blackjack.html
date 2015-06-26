@@ -6,13 +6,22 @@
   </head>
   <body>
     <button id = "cashout">Cash Out</button>
+    
     <!-- DEALER STUFF -->
-    <div class = "dealerSide">
-      <!-- THIS WILL BE WHERE DEALERS CARDS GO -->
-      <div class="back" id="dealerFlip" ></div>
-      <div class="back" id="deckPos" ></div>
+    <div class = "dealerCards">
+        <!-- cards appended here -->
+        <li class="back card" id="dealerFlip"></li>
+        <li class="back card" id="dealerFlip"></li>
+        <li class="back card" id="dealerFlip"></li>
     </div>
+
+
+    <button class="back startDeal" id="deckPos"></button>
     <!-- END DEALER STUFF -->
+
+    <!-- MIDDLE SECTION FOR ANNOUNCEMENTS -->
+    <div class = "ann"> </div>
+
     <!-- PLAYER STUFF -->
     <div class = "playerSide">
       <div class = "bank">
@@ -33,9 +42,12 @@
         </div>
       </div> 
       <!--end bank -->
-      <div class = "playerCards"></div>
+      <div class = "playerCards">
+        <li class="back card" id="dealerFlip"></li>
+        <li class="back card" id="dealerFlip"></li>
+      </div>
       <div class = "moveButtons">
-        <button id = "hit">Hit</button>
+        <button id = "hit"> Hit </button>
         <button id = "stay">Stay</button>
       </div>
     </div>

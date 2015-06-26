@@ -7,6 +7,7 @@ var Card = function(value, suit, idCode){
   this.value = value;
   this.suit = suit;
   this.idCode = idCode;
+  this.imgURL = (suit + value + ".jpg");
 };
 
 var initDeck = function(){
