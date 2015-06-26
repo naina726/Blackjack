@@ -73,7 +73,14 @@ html{
 	border-radius: 10px;
 }
 
+#annText{
+	position: relative;
+	font-size: 25px;
+	color: white;
+	font-family: Georgia;
+	top: 40%;
 
+}
 
 /* PLAYER SIDE STUFF */
 .bank {
@@ -108,6 +115,15 @@ p {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.bankBox p{
+	color: white;
+	font-family: Georgia;
+	font-size: 25px;
+	margin-top: 8px;
+}
+
+
 .tokens button{
 	font-size: 18px;
 	padding: 20px;

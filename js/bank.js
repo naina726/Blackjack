@@ -12,8 +12,12 @@ playerBank = {
 		return (this.balance != 0);
 	},
 
-	makeBet: function(){
-		this.currentBet = parseInt(prompt("Enter bet!"));
+	makeBet: function(bet){
+		//this.currentBet = parseInt(prompt("Enter bet!"));
+
+
+
+
 		while (this.currentBet > this.balance){
 			alert("Insufficient funds");
 			this.currentBet = prompt("Enter bet!");
