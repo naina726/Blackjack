@@ -1,0 +1,83 @@
+html{
+	background-image: url(../img/bg.jpg);
+}
+/* DEALER SIDE STUFF */
+#cashout{
+	font-size: 25px;
+	padding: 18px;
+	border-radius: 40px;
+	border: solid white 2px;
+	background: rgba(0,0,0,0.5);
+  	font-family: Georgia;
+  	color: #ffffff;
+  	margin-top: 20px;
+  	margin-left: 20px;
+}
+.back{
+	width: 100px;
+	height: 150px;
+	background-image: url(../img/cardBack.jpg);
+	border: solid black 2px;
+	border-radius: 12px;
+}
+.dealerSide{
+	margin-top: 20px;
+}
+#deckPos{
+	margin-left: 1000px;
+}
+#dealerFlip{
+	margin-left: 700px;
+}
+/* END DEALER SIDE STUFF*/
+
+/* PLAYER SIDE STUFF */
+p {
+	font-family: Georgia;
+	font-size: 22px; 
+	/* HOW THE FUCK DO U MAKE THIS WHITE */
+  	font-color: solid white;
+  	text-decoration: none;
+}
+.bankBox{
+	width: 100;
+	height: 40;
+	background-color: #FFEBD6;
+	border-radius: 10px;
+}
+.tokens button{
+	font-size: 18px;
+	padding: 20px;
+	border-radius: 100%;
+	/* border: 1px solid white;*/
+	border: .25em dashed white;
+  	font-family: Georgia;
+  	color: #ffffff;
+  	
+}
+#ten{
+	background-color: red;
+}
+#twenty{
+	background-color: green;
+}
+#fifty{
+	background-color: blue;
+}
+
+
+.moveButtons button{
+	font-size: 20px;
+	padding: 15px;
+	border-radius: 28px;
+	border: solid white 2px;
+	background: rgba(0,0,0,0.5);
+  	font-family: Georgia;
+  	color: #ffffff;
+}
+
+
+
+
+
+

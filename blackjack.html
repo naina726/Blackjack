@@ -2,9 +2,46 @@
 <html>
   <head>
     <title>Blackjack</title>
-  
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <button id = "cashout">Cash Out</button>
+    <!-- DEALER STUFF -->
+    <span class = "dealerSide">
+      <!-- THIS WILL BE WHERE DEALERS CARDS GO -->
+      <div class="back" id="dealerFlip" ></div>
+      <div class="back" id="deckPos" ></div>
+    </span>
+    <!-- END DEALER STUFF -->
+    <!-- PLAYER STUFF -->
+    <span class = "playerSide">
+      <div class = "bank">
+        <div id = "curBet"> 
+          <p id = "cb">Current Bet<p>
+          <div class = "bankBox" id = "betBox"></div>
+        </div>
+
+        <div id = "curBank"> 
+          <p id = "bb">Bank Balance<p>
+          <div class = "bankBox" id = "balBox"></div>
+        </div>
+
+        <div class = "tokens">
+          <button id="ten">10</button>
+          <button id="twenty">20</button>
+          <button id="fifty">50</button>
+        </div>
+      </div> 
+      <!--end bank -->
+      <div class = "playerCards"></div>
+      <div class = "moveButtons">
+        <button id = "hit">Hit</button>
+        <button id = "stay">Stay</button>
+      </div>
+    </span>
+    <!--END PLAYER STUFF-->
+
+
     <script src="js/theDeck.js"></script>
     <script src="js/hand.js"></script>
     <script src="js/bank.js"></script>
@@ -18,6 +55,6 @@
 <!-- This was under <title> in <head>
 
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 -->
