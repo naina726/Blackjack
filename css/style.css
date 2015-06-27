@@ -24,7 +24,6 @@ html{
 	background-image: url(../img/cardBack.jpg);
 	border: solid black 2px;
 	border-radius: 12px;
-	
 }
 .dealerCards{
 	position: absolute;
@@ -103,8 +102,10 @@ p {
   	text-decoration: none;
   	left: 10px;
   	margin: 0;
+  	position: relative;
 }
 .bankBox{
+	position: relative;
 	width: 130px;
 	height: 50px;
 	border-radius: 10px;
@@ -116,13 +117,11 @@ p {
 	margin-right: auto;
 }
 
-.bankBox p{
+.money{
 	color: white;
 	font-family: Georgia;
 	font-size: 25px;
-	margin-top: 8px;
 }
-
 
 .tokens button{
 	font-size: 18px;

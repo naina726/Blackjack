@@ -39,6 +39,7 @@ var computeRoundWinner = function(){
 	return;
 }
 
+//////////////////
 var playGame = function(){
 	console.log("Bank balance: $" + playerBank.returnBalance());
 	playerBank.makeBet();

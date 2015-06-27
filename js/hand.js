@@ -11,7 +11,7 @@ var player = {
 		aceLow = 0;
 		var firstAce = true;
 		for(var i = 0; i < (this.hand).length; i++){
-			if ((this.hand[i].idCode == "ace") && firstAce){
+			if ((this.hand[i].idCode == "a") && firstAce){
 				aceHigh += 11;
 				aceLow += 1;
 				firstAce = false;
@@ -44,6 +44,10 @@ var player = {
 		this.hand.push(deck.shift());
 		this.hand.push(deck.shift());
 		this.computeValue();
+		
+
+
+		
 		console.log("Player hand: " + this.showHand());
 		console.log("Player current total: " + this.currentSum);
 		return;
@@ -60,7 +64,7 @@ var player = {
 
 	checkBust: function(){
 		if (this.currentSum > 21){
-			alert(this.currentSum + " - BUST! YOU LOSE");
+			//alert(this.currentSum + " - BUST! YOU LOSE");
 			return true;
 		};
 		return false;
@@ -99,7 +103,7 @@ var dealer = {
 
 	checkBust: function(){
 		if (this.currentSum > 21){
-			alert(this.currentSum + " - BUST! DEALER LOSES!");
+			//alert(this.currentSum + " - BUST! DEALER LOSES!");
 			return true;
 		};
 		return false;

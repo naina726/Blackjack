@@ -15,7 +15,7 @@ var initDeck = function(){
   for (var i = 0; i < allSuits.length; i++){
     for (var k = 1; k < 14; k++){
       if(k == 1){
-        card = new Card(1, allSuits[i], "ace");
+        card = new Card(1, allSuits[i], "a");
         deck.push(card);
       }
       else if(k < 11){
@@ -23,15 +23,15 @@ var initDeck = function(){
         deck.push(card);
       }
       else if (k == 11){
-        card = new Card(10, allSuits[i], "jack");
+        card = new Card(10, allSuits[i], "j");
         deck.push(card);
       }
       else if (k == 12){
-        card = new Card(10, allSuits[i], "queen");
+        card = new Card(10, allSuits[i], "q");
         deck.push(card);
       }
       else if (k == 13){
-        card = new Card(10, allSuits[i], "king");
+        card = new Card(10, allSuits[i], "k");
         deck.push(card);
       }
       else { console.log("Error in initDeck loop"); }

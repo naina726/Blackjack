@@ -27,12 +27,12 @@ button:hover{
 }
 
 
-h1{
+p{
   font-family: Georgia;
   font-size: 60px;
   color: white;
   position: relative;
-  top: 20%;
+  top: 10%;
 
 }
 
