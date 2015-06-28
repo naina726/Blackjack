@@ -17,12 +17,12 @@
         <li class="back card" id="dealerFlip"></li>
     </div>
 
-    <button class="back startDeal" id="deckPos"></button>
+    <button class="back startDeal" id="deckPos" disabled></button>
     <!-- END DEALER STUFF -->
 
     <!-- MIDDLE SECTION FOR ANNOUNCEMENTS -->
     <div class = "ann">
-      <p id = "annText"> Click the deck to deal! </p>
+      <p id = "annText">Place a bet and click the deck to deal!</p>
     </div>
 
     <!-- PLAYER STUFF -->
@@ -30,7 +30,7 @@
       <div class = "bank">
         <div id = "curBet"> 
           <p>Current Bet</p>
-          <div class = "bankBox money" id = "betBox">$</div>
+          <div class = "bankBox money" id = "betBox">$0</div>
         </div>
 
         <div id = "curBank"> 
@@ -39,9 +39,9 @@
         </div>
 
         <div class = "tokens">
-          <button id="ten" disabled>10</button>
-          <button id="twenty" disabled>20</button>
-          <button id="fifty" disabled>50</button>
+          <button id="ten">10</button>
+          <button id="twenty">20</button>
+          <button id="fifty">50</button>
         </div>
       </div> 
       <!--end bank -->

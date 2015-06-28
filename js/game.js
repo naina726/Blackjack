@@ -20,23 +20,24 @@ var computeRoundWinner = function(){
 	var finalResult = compareHands();
 
 	if(finalResult == "playerBlackjack"){
-		alert("BLACKJACK!\nPlayer wins!\n" + player.currentSum + " to " + dealer.currentSum);
+		//alert("BLACKJACK!\nPlayer wins!\n" + player.currentSum + " to " + dealer.currentSum);
 		playerBank.blackjackBet();
 	}
 	else if (finalResult == "player"){
-		alert("Player wins!\n" + player.currentSum + " to " + dealer.currentSum);
+		//alert("Player wins!\n" + player.currentSum + " to " + dealer.currentSum);
 		playerBank.wonBet();
 	}
 	else if (finalResult == "dealer"){
-		alert("Dealer wins!\n" + dealer.currentSum + " to " + player.currentSum);
+		//alert("Dealer wins!\n" + dealer.currentSum + " to " + player.currentSum);
 		playerBank.lostBet();
 	}
 	else if (finalResult == "draw"){
-		alert("Draw!\n" + dealer.currentSum + " to " + player.currentSum);
+		//alert("Draw!\n" + dealer.currentSum + " to " + player.currentSum);
 		playerBank.drawBet();
 	}
 	else{ console.log("Error with bets");}
-	return;
+	
+	return finalResult;
 }
 
 //////////////////

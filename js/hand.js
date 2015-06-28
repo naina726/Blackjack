@@ -3,7 +3,6 @@ console.log("hand.js loaded");
 var player = {
 	hand: [],
 	currentSum: 0,
-	ace: 0,
 
 	computeValue: function(){
 		this.currentSum = 0;
@@ -11,7 +10,7 @@ var player = {
 		aceLow = 0;
 		var firstAce = true;
 		for(var i = 0; i < (this.hand).length; i++){
-			if ((this.hand[i].idCode == "a") && firstAce){
+			if ((this.hand[i].idCode == "A") && firstAce){
 				aceHigh += 11;
 				aceLow += 1;
 				firstAce = false;
@@ -44,10 +43,7 @@ var player = {
 		this.hand.push(deck.shift());
 		this.hand.push(deck.shift());
 		this.computeValue();
-		
 
-
-		
 		console.log("Player hand: " + this.showHand());
 		console.log("Player current total: " + this.currentSum);
 		return;
@@ -68,6 +64,10 @@ var player = {
 			return true;
 		};
 		return false;
+	},
+
+	hasBlackjack: function(){
+		return (this.currentSum == 21);
 	}
 };
 
@@ -77,9 +77,27 @@ var dealer = {
 
 	computeValue: function(){
 		this.currentSum = 0;
+		aceHigh = 0;
+		aceLow = 0;
+		var firstAce = true;
 		for(var i = 0; i < (this.hand).length; i++){
-			this.currentSum += (this.hand[i].value)
+			if ((this.hand[i].idCode == "A") && firstAce){
+				aceHigh += 11;
+				aceLow += 1;
+				firstAce = false;
+			}
+			else{
+				aceHigh += this.hand[i].value;
+				aceLow += this.hand[i].value;
+			}
 		};
+
+		if (aceHigh <= 21){
+			this.currentSum = aceHigh;
+		}
+		else{
+			this.currentSum = aceLow;
+		}
 		return;
 	},
 
