@@ -1,13 +1,13 @@
 console.log("makeCards.js loaded")
 
 var cardMaker = function(user, myCard){
-	// (myCard != "fake")
-	//{
+	if (myCard != "fake")
+	{
 		var suit = myCard.suit;
 		var name = myCard.idCode;
 		var sColor = myCard.suitColor;
 
-		var newCard = $("<div>").attr("class", "cardINTERNAL card");
+		var newCard = $("<div>").attr("class", "card");
 
 		var val1 = $("<p>").attr("class", "value");
 		val1.attr("id", "first");
@@ -40,14 +40,25 @@ var cardMaker = function(user, myCard){
 		}
 		else{
 			//setTimeout(function () {
+
+			//newCard.css({"display":"table-cell", "vertical-align":"middle"})
       		$(".dealerCards").append(newCard); 
       		//}, 500);
 		}
-	/*}
+	}
 	else{
-		var fakeCard = $("<div>").attr("class", "cardINTERNAL card backC");
+		var fakeCard = $("<div>");
 		fakeCard.attr("id", "dealerFlip");
+		//fakeCard.css({"display":"table-cell", "vertical-align":"middle"})
+		/*
+		var val1 = $("<p>").attr("class", "value");
+		var val2 = $("<p>").attr("class", "value");
+		var val3 = $("<p>").attr("class", "value");
+		fakeCard.append(val1);
+		fakeCard.append(val2);
+		fakeCard.append(val3);
+		*/
 		$(".dealerCards").append(fakeCard);
-	}*/
+	}
 }
 

@@ -112,7 +112,7 @@ $("#hit").click(function(){
 });
 
 $("#stay").click(function(){
-	//$("#dealerFlip").remove();
+	$("#dealerFlip").remove();
 	dealer.hit();
 	if (dealer.checkBust()){
 		if (player.hasBlackjack()){
