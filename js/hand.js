@@ -43,6 +43,8 @@ var player = {
 		this.hand.push(deck.shift());
 		this.hand.push(deck.shift());
 		this.computeValue();
+		cardMaker("p", this.hand[0]);
+		cardMaker("p", this.hand[1]);
 
 		console.log("Player hand: " + this.showHand());
 		console.log("Player current total: " + this.currentSum);
@@ -50,7 +52,9 @@ var player = {
 	},
 
 	hit: function(){
-		this.hand.push(deck.shift());
+		var curCard = deck.shift();
+		cardMaker("p", curCard);
+		this.hand.push(curCard);
 		this.computeValue();
 		this.checkBust();
 		console.log("Player hand: " + this.showHand());
@@ -102,8 +106,12 @@ var dealer = {
 	},
 
 	initialDeal: function(){
+		//cardMaker("d", "fake");
+
 		this.hand.push(deck.shift());
+		cardMaker("d", this.hand[0]);		
 		this.computeValue();
+
 		console.log("Dealer's visible hand: " + this.hand[0].idCode);
 		console.log("Dealer current total: " + this.currentSum);
 		return;
@@ -111,7 +119,9 @@ var dealer = {
 
 	hit: function(){
 		while (this.currentSum < 17){
-			this.hand.push(deck.shift());
+			var curCard = deck.shift();
+			cardMaker("d", curCard);
+			this.hand.push(curCard);
 			this.computeValue();
 			this.checkBust();
 			console.log("Dealer current total: " + this.currentSum);

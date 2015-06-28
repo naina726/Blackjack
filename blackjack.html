@@ -4,6 +4,8 @@
     <title>Blackjack</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
   <body>
@@ -12,9 +14,6 @@
     <!-- DEALER STUFF -->
     <div class = "dealerCards">
         <!-- cards appended here -->
-        <li class="back card" id="dealerFlip"></li>
-        <li class="back card" id="dealerFlip"></li>
-        <li class="back card" id="dealerFlip"></li>
     </div>
 
     <button class="back startDeal" id="deckPos" disabled></button>
@@ -46,8 +45,7 @@
       </div> 
       <!--end bank -->
       <div class = "playerCards">
-        <li class="back card" id="dealerFlip"></li>
-        <li class="back card" id="dealerFlip"></li>
+
       </div>
       <div class = "moveButtons">
         <button id = "hit" disabled> Hit </button>
@@ -55,11 +53,11 @@
       </div>
     </div>
     <!--END PLAYER STUFF-->
+    <script src="js/makeCards.js"></script>
     <script src="js/theDeck.js"></script>
     <script src="js/hand.js"></script>
     <script src="js/bank.js"></script>
     <script src="js/game.js"></script>
-    <script src="js/app.js"></script>
     <script src="js/dom.js"></script>
   </body>
 </html>

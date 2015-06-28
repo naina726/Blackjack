@@ -18,15 +18,17 @@ html{
 #cashout:hover{
   background: rgba(0,0,0,0.7);
 }
+
 .back{
 	width: 100px;
 	height: 150px;
 	background-image: url(../img/cardBack.jpg);
 	border: solid black 2px;
 	border-radius: 12px;
+	position: relative;
 }
 .dealerCards{
-	position: absolute;
+	position: relative;
 	display: inline-block;
 	top: 50px;
 	left: 320px;
@@ -37,13 +39,7 @@ html{
 	border: 5px solid;
 	border-color: rgba(0,0,0,0.5);
 }
-.card{
-	margin-left: auto;
-	margin-right: auto;
-	display: inline-block;
-	list-style-type: none;
-	margin-top: 25px;
-}
+
 #deckPos{
 	position: absolute;
 	right: 120px;
@@ -74,7 +70,7 @@ html{
 
 #annText{
 	position: relative;
-	font-size: 23px;
+	font-size: 21px;
 	color: white;
 	font-family: Georgia;
 	top: 40%;
@@ -149,13 +145,14 @@ p {
 	border: 5px solid;
 	border-color: rgba(0,0,0,0.5);
 	display: inline-block;
-	bottom: 50px;
-	left: 320px;
+	bottom: 60px;
+	left: 325px;
 	width: 640px;
 	height: 200px;
 	text-align: center;
 	border-radius: 10px;
 }
+
 
 .moveButtons button{
 	font-size: 30px;

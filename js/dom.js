@@ -16,9 +16,13 @@ $("#ten").click(function(){
 		var balString = "$" + tempBal.toString();
 		$("#betBox").html(betString);
 		$("#balBox").html(balString);
+		$(".playerCards").empty();
+		$(".dealerCards").empty();
 	}
 	else{
 		$("#annText").text("Try a smaller amount or click the deck to deal!");
+		$(".playerCards").empty();
+		$(".dealerCards").empty();
 	}
 
 });
@@ -33,9 +37,13 @@ $("#twenty").click(function(){
 		var balString = "$" + tempBal.toString();
 		$("#betBox").html(betString);
 		$("#balBox").html(balString);
+		$(".playerCards").empty();
+		$(".dealerCards").empty();
 	}
 	else{
-		$("#annText").text("Try a smaller amount or click hit!");
+		$("#annText").text("Try a smaller amount or click the deck to deal!");
+		$(".playerCards").empty();
+		$(".dealerCards").empty();
 	}
 });
 $("#fifty").click(function(){
@@ -49,9 +57,13 @@ $("#fifty").click(function(){
 		var balString = "$" + tempBal.toString();
 		$("#betBox").html(betString);
 		$("#balBox").html(balString);
+		$(".playerCards").empty();
+		$(".dealerCards").empty();
 	}
 	else{
 		$("#annText").text("Try a smaller amount or click the deck!");
+		$(".playerCards").empty();
+		$(".dealerCards").empty();
 	}
 });
 
@@ -100,6 +112,7 @@ $("#hit").click(function(){
 });
 
 $("#stay").click(function(){
+	//$("#dealerFlip").remove();
 	dealer.hit();
 	if (dealer.checkBust()){
 		if (player.hasBlackjack()){
@@ -148,6 +161,7 @@ $("#stay").click(function(){
 	$("#ten").prop("disabled", false);
 	$("#twenty").prop("disabled", false);
 	$("#fifty").prop("disabled", false);
+
 	resetDeck();
 });
 
