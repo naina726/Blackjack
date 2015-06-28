@@ -1,5 +1,6 @@
-var cardMaker = function(user, myCard){
+console.log("makeCards.js loaded")
 
+var cardMaker = function(user, myCard){
 	// (myCard != "fake")
 	//{
 		var suit = myCard.suit;
@@ -38,7 +39,9 @@ var cardMaker = function(user, myCard){
 			$(".playerCards").append(newCard);
 		}
 		else{
-			$(".dealerCards").append(newCard);
+			//setTimeout(function () {
+      		$(".dealerCards").append(newCard); 
+      		//}, 500);
 		}
 	/*}
 	else{
