@@ -49,6 +49,7 @@ var cardMaker = function(user, myCard){
 	else{
 		var fakeCard = $("<div>");
 		fakeCard.attr("id", "dealerFlip");
+		fakeCard.attr("class", "card");
 		//fakeCard.css({"display":"table-cell", "vertical-align":"middle"})
 		/*
 		var val1 = $("<p>").attr("class", "value");

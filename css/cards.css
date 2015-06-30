@@ -16,11 +16,11 @@
 
 #dealerFlip{
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: 300px;
 	display: inline-block;
 	list-style-type: none;
 	margin-top: 25px;
-	position: relative;
+	position: absolute;
 	margin-left: 5px;
 	margin-right: 5px;
 	width: 100px;
@@ -50,6 +50,8 @@
 	top: 40px;
 	left: 32px;
 }
+
+
 
 .suit{
 	position: relative;

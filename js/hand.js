@@ -110,7 +110,7 @@ var dealer = {
 
 		this.hand.push(deck.shift());
 		cardMaker("d", this.hand[0]);
-		//cardMaker("d", "fake");
+		cardMaker("d", "fake");
 		this.computeValue();
 
 		console.log("Dealer's visible hand: " + this.hand[0].idCode);
